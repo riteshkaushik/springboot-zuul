@@ -1,0 +1,20 @@
+server:
+    port: 8888
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    spring-order-service:
+      path: /order/**
+      serviceId: spring-order-service1
+    spring-user-service:
+      path: /user/**
+      serviceId: spring-user-service

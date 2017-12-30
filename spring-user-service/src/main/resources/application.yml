@@ -1,0 +1,15 @@
+server:
+    port: 8091
+
+spring:
+    application:
+        name: spring-user-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
